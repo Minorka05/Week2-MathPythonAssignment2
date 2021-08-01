@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week 2 Python Assignment</title>
+</head>
+<body>
+<h1>Week 2 Python Assignment</h1>
+<h2>Minorka Hassell</h2>
+<h2>#Write a Python program to compute the eigenvalues and right eigenvectors of a given square array.</h2>
+import numpy as np
+m = np.mat("3 -2;1 0")
+print("Original matrix:")
+print("a\n", m)
+w, v = np.linalg.eig(m) 
+print( "Eigenvalues of the said matrix",w)
+print( "Eigenvectors of the said matrix",v)
+
+<h2>#Write a Python program to compute the factor of a given array by Singular Value Decomposition</h2>
+import numpy as np
+a = np.array([[1, 0, 0, 0, 2], [0, 0, 3, 0, 0], [0, 0, 0, 0, 0], [0, 2, 0, 0, 0]], dtype=np.float32)
+print("Original array:")
+print(a)
+U, s, V = np.linalg.svd(a, full_matrices=False)
+q, r = np.linalg.qr(a)
+print("Factor of a given array  by Singular Value Decomposition:")
+print("U=\n", U, "\ns=\n", s, "\nV=\n", V)
+
+
+<h2># Write a Python program to compute the determinant of an array.</h2>
+import numpy as np
+a = np.array([[1,2],[3,4]])
+print("Original array:")
+print(a)
+result =  np.linalg.det(a)
+print("Determinant of the said array:")
+print(result)
+
+</body>
+</html>
+ 
